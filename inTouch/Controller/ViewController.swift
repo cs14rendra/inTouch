@@ -8,14 +8,17 @@
 
 import UIKit
 import RealmSwift
+import SwiftRichString
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    let section = ["Name", "Notes","Organisation","City","PhoneNumber"]
+    let red = Style("", {
+        $0.color = UIColor.red
+    })
     
-    var filteredCandies = [MOCK_DATA]()
-    let section = ["name", "notes","organisation","city","PhoneNumber"]
-    
+    var searchText : String?
     var names = [MOCK_DATA](){
         didSet{
           self.tableView.reloadData()
@@ -60,7 +63,8 @@ class ViewController: UIViewController {
     }
     
     func applyFilter(text : String){
-        APIManager.shared.getContactDetails(text: text) { name,note,org,city,number in
+        self.searchText = text
+        APIManager.shared.getContactDetails(text: text) { name,note,org,city,num in
             if let _name = name{
                 self.names = _name
             }
@@ -74,7 +78,7 @@ class ViewController: UIViewController {
                 self.city = _city
             }
             
-            if let _number = number{
+            if let _number = num{
                 self.number = _number
             }
             
@@ -93,6 +97,7 @@ class ViewController: UIViewController {
     func searchBarIsEmpty() -> Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
+    
 }
 
 extension ViewController : UISearchResultsUpdating{
@@ -103,10 +108,14 @@ extension ViewController : UISearchResultsUpdating{
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         applyFilter(text: searchText)
     }
+    
 }
+
 
 extension ViewController :  UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //print(totalItemCount())
+        //print(isFiltering())
         if totalItemCount() <= 0 && !isFiltering(){
             return ""
         }
@@ -118,89 +127,83 @@ extension ViewController :  UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if section == 0{
+        switch section{
+        case 0 :
             return  isFiltering() && self.names.count == 0  ? 1 : self.names.count
-        }
-        if section == 1{
+        case 1 :
             return  isFiltering() && self.notes.count == 0 ? 1 : self.notes.count
-        }
-        if section == 2{
+        case 2 :
             return  isFiltering() && self.organisation.count == 0 ? 1 : self.organisation.count
-        }
-        if section == 3{
+        case 3 :
             return  isFiltering() && self.city.count == 0 ? 1 : self.city.count
+        case 4 :
+            return  isFiltering() && self.number.count == 0 ? 1 : self.number.count
+        default:
+            return 0
         }
-        if section == 4{
-            return  isFiltering() && self.city.count == 0 ? 1 : self.number.count
-        }
-       return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        let candy: MOCK_DATA?
-//        if isFiltering() {
-//            candy = filteredCandies[indexPath.row]
-//        } else {
-//            candy = nil
-//        }
-//        cell.textLabel!.text = candy?.name
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if indexPath.section == 0{
+        
+        switch indexPath.section {
+        case 0 :
             if self.names.count <= 0 {
-              cell.textLabel?.text = "Did Not Match"
+              cell.textLabel?.text = "No results!"
                
             }else{
-               cell.textLabel?.text = self.names[indexPath.row].name
+                let text = self.names[indexPath.row].name
+                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+                cell.textLabel?.attributedText = attributedText
             }
-            
-        }
-        if indexPath.section == 1{
+        case 1 :
             if self.notes.count <= 0 {
-                cell.textLabel?.text = "Did Not Match Notes"
+                cell.textLabel?.text = "No results!"
                 
             }else{
-                cell.textLabel?.text = self.notes[indexPath.row].notes
+                let text = self.notes[indexPath.row].notes
+                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+                cell.textLabel?.attributedText = attributedText
             }
-        }
         
-        if indexPath.section == 2{
+       case 2 :
             if self.organisation.count <= 0 {
-                cell.textLabel?.text = "Did Not Match"
+                cell.textLabel?.text = "No results!"
                 
             }else{
-                cell.textLabel?.text = self.organisation[indexPath.row].organisation
+                let text = self.organisation[indexPath.row].organisation
+                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+                cell.textLabel?.attributedText = attributedText
             }
-            
-        }
-        if indexPath.section == 3{
+        case 3 :
             if self.city.count <= 0 {
-                cell.textLabel?.text = "Did Not Match"
+                cell.textLabel?.text = "No results!"
                 
             }else{
-                cell.textLabel?.text = self.city[indexPath.row].city
+                let text = self.city[indexPath.row].city
+                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+                cell.textLabel?.attributedText = attributedText
             }
-            
-        }
-        if indexPath.section == 4{
+        case 4 :
             if self.number.count <= 0 {
-                cell.textLabel?.text = "Did Not Match"
+                cell.textLabel?.text = "No results!"
                 
             }else{
-                cell.textLabel?.text = "\(self.number[indexPath.row].number)"
+                let text = "\(self.number[indexPath.row].number)"
+                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+                cell.textLabel?.attributedText = attributedText
             }
-            
+        default :
+            break
         }
         return cell
     }
-    
 }
 
 extension ViewController :  UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        //print(indexPath)
         let vc = DetailsVC()
         switch indexPath.section {
         case 0:
@@ -218,6 +221,90 @@ extension ViewController :  UITableViewDelegate{
         case 4:
             vc.contact = self.number[indexPath.row]
             self.present(vc, animated: true, completion: nil)
+        default:
+            break
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let title = view as? UITableViewHeaderFooterView{
+            title.textLabel?.textColor = UIColor.red
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let firstactin = UITableViewRowAction(style: .default, title: "Delete", handler: {(action, indexpath) in
+            do{
+               try self.deleteData(at: indexPath)
+            }catch{
+               print(error.localizedDescription)
+            }
+            print("deleted")
+        })
+        let secondtactin = UITableViewRowAction(style: .default, title: "share", handler: {(action, indexpath) in
+            print("share")
+        })
+        
+        firstactin.backgroundColor = UIColor.gray
+        secondtactin.backgroundColor = UIColor.green
+        return [firstactin,secondtactin]
+    }
+}
+
+extension ViewController{
+    func deleteData(at indexPath : IndexPath) throws{
+        switch indexPath.section {
+        case 0:
+            let item = self.names[indexPath.row]
+            let realm = try! Realm()
+            try realm.write{
+                    realm.delete(item)
+                    self.tableView.beginUpdates()
+                    self.names.remove(at: indexPath.row)
+                    self.tableView.deleteRows(at: [indexPath], with: .top)
+                    self.tableView.endUpdates()
+            }
+        case 1:
+            let item = self.notes[indexPath.row]
+            let realm = try! Realm()
+            try realm.write{
+                realm.delete(item)
+                self.tableView.beginUpdates()
+                self.notes.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .top)
+                self.tableView.endUpdates()
+            }
+            
+        case 2:
+            let item = self.organisation[indexPath.row]
+            let realm = try! Realm()
+            try realm.write{
+                realm.delete(item)
+                self.tableView.beginUpdates()
+                self.organisation.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .top)
+                self.tableView.endUpdates()
+            }
+        case 3:
+            let item = self.city[indexPath.row]
+            let realm = try! Realm()
+            try realm.write{
+                realm.delete(item)
+                self.tableView.beginUpdates()
+                self.city.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .top)
+                self.tableView.endUpdates()
+            }
+        case 4:
+            let item = self.number[indexPath.row]
+            let realm = try! Realm()
+            try realm.write{
+                realm.delete(item)
+                self.tableView.beginUpdates()
+                self.number.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .top)
+                self.tableView.endUpdates()
+            }
         default:
             break
         }

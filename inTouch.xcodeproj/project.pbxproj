@@ -130,12 +130,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EDA743961FDAFA0A008634F8 /* Controller */ = {
+		EDA743961FDAFA0A008634F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EDA743971FDAFA2B008634F8 /* APIManager.swift */,
 			);
-			name = Controller;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		EDDD9BCC1FDA8E430071B356 = {
@@ -165,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				EDDD9BE41FDA8E430071B356 /* Info.plist */,
-				EDA743961FDAFA0A008634F8 /* Controller */,
 				EDDD9C061FDA8ECC0071B356 /* Supporting Files */,
+				EDA743961FDAFA0A008634F8 /* Model */,
 				EDDD9C071FDA8EE00071B356 /* Controller */,
 				EDDD9C081FDA8EEC0071B356 /* View */,
 			);
@@ -475,11 +475,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-inTouch/Pods-inTouch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
