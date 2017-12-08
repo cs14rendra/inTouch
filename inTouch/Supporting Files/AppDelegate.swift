@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } catch {}
             try! Realm.performMigration(for: realmnewConfiguration)
             let newrealm = try! Realm(configuration: realmnewConfiguration)
-            print("Migrated objects : \(newrealm.objects(MOCK_DATA.self))")
+           // print("Migrated objects : \(newrealm.objects(MOCK_DATA.self))")
         }
 
         return true

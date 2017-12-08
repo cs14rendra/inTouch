@@ -45,13 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WOm-4R-uE7">
-                        <barButtonItem key="leftBarButtonItem" title="get" id="7jW-nD-4gw">
-                            <connections>
-                                <action selector="get:" destination="BYZ-38-t0r" id="F6Y-tB-6ZC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WOm-4R-uE7"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="fve-rb-2v1" id="4YL-JH-2Sx"/>
                         <outlet property="tableView" destination="jSC-Lh-w7j" id="v5v-Pi-PFQ"/>
