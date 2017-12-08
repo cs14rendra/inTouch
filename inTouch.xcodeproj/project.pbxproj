@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72863D65A0350CBBFFCAE14D /* Pods_inTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2429BE6A101045FC579483C7 /* Pods_inTouch.framework */; };
+		7A422F6A69540DDC335134D7 /* Pods_inTouchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */; };
+		AF3EE45BF2EC5B9FED00A48E /* Pods_inTouchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */; };
+		EDDD9BD91FDA8E430071B356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BD81FDA8E430071B356 /* AppDelegate.swift */; };
+		EDDD9BDB1FDA8E430071B356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BDA1FDA8E430071B356 /* ViewController.swift */; };
+		EDDD9BDE1FDA8E430071B356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD9BDC1FDA8E430071B356 /* Main.storyboard */; };
+		EDDD9BE01FDA8E430071B356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDD9BDF1FDA8E430071B356 /* Assets.xcassets */; };
+		EDDD9BE31FDA8E430071B356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */; };
+		EDDD9BEE1FDA8E430071B356 /* inTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BED1FDA8E430071B356 /* inTouchTests.swift */; };
+		EDDD9BF91FDA8E430071B356 /* inTouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BF81FDA8E430071B356 /* inTouchUITests.swift */; };
+		EDE046561FDAA7D1000564AC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE046551FDAA7D1000564AC /* Contact.swift */; };
+		EDE046571FDAAAEF000564AC /* defaultV1.realm in Resources */ = {isa = PBXBuildFile; fileRef = EDE046541FDAA587000564AC /* defaultV1.realm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDDD9BEA1FDA8E430071B356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDD9BCD1FDA8E430071B356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDDD9BD41FDA8E430071B356;
+			remoteInfo = inTouch;
+		};
+		EDDD9BF51FDA8E430071B356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDD9BCD1FDA8E430071B356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDDD9BD41FDA8E430071B356;
+			remoteInfo = inTouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06DBD7F07D15CAD56ECC037E /* Pods-inTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouch/Pods-inTouch.release.xcconfig"; sourceTree = "<group>"; };
+		2429BE6A101045FC579483C7 /* Pods_inTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E576F6F0A335677C4D0153E /* Pods-inTouchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8B92C4AD9DF16ABEB6A769AB /* Pods-inTouchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDDD9BD51FDA8E430071B356 /* inTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDD9BD81FDA8E430071B356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDDD9BDA1FDA8E430071B356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDDD9BDD1FDA8E430071B356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDDD9BDF1FDA8E430071B356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDDD9BE21FDA8E430071B356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDDD9BE41FDA8E430071B356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDD9BE91FDA8E430071B356 /* inTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDD9BED1FDA8E430071B356 /* inTouchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inTouchTests.swift; sourceTree = "<group>"; };
+		EDDD9BEF1FDA8E430071B356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDD9BF41FDA8E430071B356 /* inTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDD9BF81FDA8E430071B356 /* inTouchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inTouchUITests.swift; sourceTree = "<group>"; };
+		EDDD9BFA1FDA8E430071B356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE046541FDAA587000564AC /* defaultV1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultV1.realm; sourceTree = "<group>"; };
+		EDE046551FDAA7D1000564AC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F7015076F3177675B41E8B /* Pods-inTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouch/Pods-inTouch.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDDD9BD21FDA8E430071B356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72863D65A0350CBBFFCAE14D /* Pods_inTouch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BE61FDA8E430071B356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3EE45BF2EC5B9FED00A48E /* Pods_inTouchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BF11FDA8E430071B356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A422F6A69540DDC335134D7 /* Pods_inTouchUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D397216089FCAB33A60AB07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4F7015076F3177675B41E8B /* Pods-inTouch.debug.xcconfig */,
+				06DBD7F07D15CAD56ECC037E /* Pods-inTouch.release.xcconfig */,
+				8B92C4AD9DF16ABEB6A769AB /* Pods-inTouchTests.debug.xcconfig */,
+				E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */,
+				DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */,
+				4E576F6F0A335677C4D0153E /* Pods-inTouchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81C7C0D318137F4EEB10966A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2429BE6A101045FC579483C7 /* Pods_inTouch.framework */,
+				D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */,
+				EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDDD9BCC1FDA8E430071B356 = {
+			isa = PBXGroup;
+			children = (
+				EDE046541FDAA587000564AC /* defaultV1.realm */,
+				EDDD9BD71FDA8E430071B356 /* inTouch */,
+				EDDD9BEC1FDA8E430071B356 /* inTouchTests */,
+				EDDD9BF71FDA8E430071B356 /* inTouchUITests */,
+				EDDD9BD61FDA8E430071B356 /* Products */,
+				3D397216089FCAB33A60AB07 /* Pods */,
+				81C7C0D318137F4EEB10966A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EDDD9BD61FDA8E430071B356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BD51FDA8E430071B356 /* inTouch.app */,
+				EDDD9BE91FDA8E430071B356 /* inTouchTests.xctest */,
+				EDDD9BF41FDA8E430071B356 /* inTouchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDDD9BD71FDA8E430071B356 /* inTouch */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BE41FDA8E430071B356 /* Info.plist */,
+				EDDD9C061FDA8ECC0071B356 /* Supporting Files */,
+				EDDD9C071FDA8EE00071B356 /* Controller */,
+				EDDD9C081FDA8EEC0071B356 /* View */,
+			);
+			path = inTouch;
+			sourceTree = "<group>";
+		};
+		EDDD9BEC1FDA8E430071B356 /* inTouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BED1FDA8E430071B356 /* inTouchTests.swift */,
+				EDDD9BEF1FDA8E430071B356 /* Info.plist */,
+			);
+			path = inTouchTests;
+			sourceTree = "<group>";
+		};
+		EDDD9BF71FDA8E430071B356 /* inTouchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BF81FDA8E430071B356 /* inTouchUITests.swift */,
+				EDDD9BFA1FDA8E430071B356 /* Info.plist */,
+			);
+			path = inTouchUITests;
+			sourceTree = "<group>";
+		};
+		EDDD9C061FDA8ECC0071B356 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BD81FDA8E430071B356 /* AppDelegate.swift */,
+				EDE046551FDAA7D1000564AC /* Contact.swift */,
+				EDDD9BDF1FDA8E430071B356 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDDD9C071FDA8EE00071B356 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BDA1FDA8E430071B356 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EDDD9C081FDA8EEC0071B356 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDDD9BDC1FDA8E430071B356 /* Main.storyboard */,
+				EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDDD9BD41FDA8E430071B356 /* inTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDDD9BFD1FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouch" */;
+			buildPhases = (
+				80B712A1BAE6E94DA5DD5E29 /* [CP] Check Pods Manifest.lock */,
+				EDDD9BD11FDA8E430071B356 /* Sources */,
+				EDDD9BD21FDA8E430071B356 /* Frameworks */,
+				EDDD9BD31FDA8E430071B356 /* Resources */,
+				8EF9D885D47AA9BB78FDBA60 /* [CP] Embed Pods Frameworks */,
+				4836CA44035ADA0214D9CBA5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = inTouch;
+			productName = inTouch;
+			productReference = EDDD9BD51FDA8E430071B356 /* inTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDDD9BE81FDA8E430071B356 /* inTouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDDD9C001FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouchTests" */;
+			buildPhases = (
+				7A4E76BB6EFD7644B27EABE4 /* [CP] Check Pods Manifest.lock */,
+				EDDD9BE51FDA8E430071B356 /* Sources */,
+				EDDD9BE61FDA8E430071B356 /* Frameworks */,
+				EDDD9BE71FDA8E430071B356 /* Resources */,
+				A1FD468CAA5E5AE59E09CB30 /* [CP] Embed Pods Frameworks */,
+				4D1950977100396B2F2BAFD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDDD9BEB1FDA8E430071B356 /* PBXTargetDependency */,
+			);
+			name = inTouchTests;
+			productName = inTouchTests;
+			productReference = EDDD9BE91FDA8E430071B356 /* inTouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDDD9BF31FDA8E430071B356 /* inTouchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDDD9C031FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouchUITests" */;
+			buildPhases = (
+				4E31479AD6630B9AC17A3804 /* [CP] Check Pods Manifest.lock */,
+				EDDD9BF01FDA8E430071B356 /* Sources */,
+				EDDD9BF11FDA8E430071B356 /* Frameworks */,
+				EDDD9BF21FDA8E430071B356 /* Resources */,
+				102A014FEC1C31F058A1EF3A /* [CP] Embed Pods Frameworks */,
+				AC8DE56E0D2711E6A1B9BA31 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDDD9BF61FDA8E430071B356 /* PBXTargetDependency */,
+			);
+			name = inTouchUITests;
+			productName = inTouchUITests;
+			productReference = EDDD9BF41FDA8E430071B356 /* inTouchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDDD9BCD1FDA8E430071B356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "surendra kumar";
+				TargetAttributes = {
+					EDDD9BD41FDA8E430071B356 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					EDDD9BE81FDA8E430071B356 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDDD9BD41FDA8E430071B356;
+					};
+					EDDD9BF31FDA8E430071B356 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDDD9BD41FDA8E430071B356;
+					};
+				};
+			};
+			buildConfigurationList = EDDD9BD01FDA8E430071B356 /* Build configuration list for PBXProject "inTouch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDDD9BCC1FDA8E430071B356;
+			productRefGroup = EDDD9BD61FDA8E430071B356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDDD9BD41FDA8E430071B356 /* inTouch */,
+				EDDD9BE81FDA8E430071B356 /* inTouchTests */,
+				EDDD9BF31FDA8E430071B356 /* inTouchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDDD9BD31FDA8E430071B356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE046571FDAAAEF000564AC /* defaultV1.realm in Resources */,
+				EDDD9BE31FDA8E430071B356 /* LaunchScreen.storyboard in Resources */,
+				EDDD9BE01FDA8E430071B356 /* Assets.xcassets in Resources */,
+				EDDD9BDE1FDA8E430071B356 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BE71FDA8E430071B356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BF21FDA8E430071B356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		102A014FEC1C31F058A1EF3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4836CA44035ADA0214D9CBA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouch/Pods-inTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D1950977100396B2F2BAFD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E31479AD6630B9AC17A3804 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inTouchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A4E76BB6EFD7644B27EABE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inTouchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80B712A1BAE6E94DA5DD5E29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inTouch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EF9D885D47AA9BB78FDBA60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-inTouch/Pods-inTouch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouch/Pods-inTouch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1FD468CAA5E5AE59E09CB30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC8DE56E0D2711E6A1B9BA31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDDD9BD11FDA8E430071B356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE046561FDAA7D1000564AC /* Contact.swift in Sources */,
+				EDDD9BDB1FDA8E430071B356 /* ViewController.swift in Sources */,
+				EDDD9BD91FDA8E430071B356 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BE51FDA8E430071B356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDDD9BEE1FDA8E430071B356 /* inTouchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDD9BF01FDA8E430071B356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDDD9BF91FDA8E430071B356 /* inTouchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDDD9BEB1FDA8E430071B356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDDD9BD41FDA8E430071B356 /* inTouch */;
+			targetProxy = EDDD9BEA1FDA8E430071B356 /* PBXContainerItemProxy */;
+		};
+		EDDD9BF61FDA8E430071B356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDDD9BD41FDA8E430071B356 /* inTouch */;
+			targetProxy = EDDD9BF51FDA8E430071B356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDDD9BDC1FDA8E430071B356 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDDD9BDD1FDA8E430071B356 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDDD9BE21FDA8E430071B356 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDDD9BFB1FDA8E430071B356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDDD9BFC1FDA8E430071B356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDDD9BFE1FDA8E430071B356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4F7015076F3177675B41E8B /* Pods-inTouch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDDD9BFF1FDA8E430071B356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DBD7F07D15CAD56ECC037E /* Pods-inTouch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDDD9C011FDA8E430071B356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B92C4AD9DF16ABEB6A769AB /* Pods-inTouchTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inTouch.app/inTouch";
+			};
+			name = Debug;
+		};
+		EDDD9C021FDA8E430071B356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inTouch.app/inTouch";
+			};
+			name = Release;
+		};
+		EDDD9C041FDA8E430071B356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = inTouch;
+			};
+			name = Debug;
+		};
+		EDDD9C051FDA8E430071B356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E576F6F0A335677C4D0153E /* Pods-inTouchUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = inTouchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.inTouchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = inTouch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDDD9BD01FDA8E430071B356 /* Build configuration list for PBXProject "inTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDDD9BFB1FDA8E430071B356 /* Debug */,
+				EDDD9BFC1FDA8E430071B356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDDD9BFD1FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDDD9BFE1FDA8E430071B356 /* Debug */,
+				EDDD9BFF1FDA8E430071B356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDDD9C001FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDDD9C011FDA8E430071B356 /* Debug */,
+				EDDD9C021FDA8E430071B356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDDD9C031FDA8E430071B356 /* Build configuration list for PBXNativeTarget "inTouchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDDD9C041FDA8E430071B356 /* Debug */,
+				EDDD9C051FDA8E430071B356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDDD9BCD1FDA8E430071B356 /* Project object */;
+}
