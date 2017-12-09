@@ -26,7 +26,7 @@ protocol DetailsViewModelItem {
 class DetailsViewModel: NSObject{
     var items = [DetailsViewModelItem]()
     
-    init(_data : MOCK_DATA?) {
+    init(_data : Contacts?) {
         guard let data = _data else {return}
         items.append(Name(name: data.name))
         items.append(Number(number: "\(data.number)"))

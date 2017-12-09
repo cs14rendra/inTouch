@@ -19,27 +19,27 @@ class ViewController: UIViewController {
     })
     
     var searchText : String?
-    var names = [MOCK_DATA](){
+    var names = [Contacts](){
         didSet{
           self.tableView.reloadData()
         }
     }
-    var notes = [MOCK_DATA](){
+    var notes = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
     }
-    var organisation = [MOCK_DATA](){
+    var organisation = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
     }
-    var city = [MOCK_DATA](){
+    var city = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
     }
-    var number = [MOCK_DATA](){
+    var number = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
@@ -286,13 +286,17 @@ extension ViewController :  UITableViewDelegate{
             switch section{
             case 0 :
                 let obj = feb()
-                obj.number = self.names[indexPath.row].number
-                do{
-                   try  realm?.write {
-                        realm?.add(obj)
+                let numberString = self.names[indexPath.row].number
+                let numInt = Int(numberString)
+                if let n = numInt{
+                    obj.number = n
+                    do{
+                        try  realm?.write {
+                            realm?.add(obj)
+                        }
+                    }catch{
+                        print(error.localizedDescription)
                     }
-                }catch{
-                    print(error.localizedDescription)
                 }
             default: break
             }

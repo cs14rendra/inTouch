@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaultParentURL = defaultURL.deletingLastPathComponent()
         let migrationBlock: MigrationBlock = { migration, oldSchemaVersion in
             if oldSchemaVersion < 1 {
-                migration.enumerateObjects(ofType: MOCK_DATA.className()) { oldObject, newObject in
+                migration.enumerateObjects(ofType: Contacts.className()) { oldObject, newObject in
                    
                 }
             }
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let url = bundleURL("defaultV1") {
             let realmURL = defaultParentURL.appendingPathComponent("defaultV1.realm")
             print(realmURL)
-            let realmnewConfiguration = Realm.Configuration(fileURL: realmURL, schemaVersion: 0, migrationBlock: migrationBlock)
+            let realmnewConfiguration = Realm.Configuration(fileURL: realmURL, schemaVersion: 1, migrationBlock: migrationBlock)
             do {
                 //try FileManager.default.removeItem(at: realmURL)
                 try FileManager.default.copyItem(at: url, to: realmURL)
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do{
                 try Realm.performMigration(for: realmnewConfiguration)
                 realm = try Realm(configuration: realmnewConfiguration)
-                print("Migrated objects : \(realm?.objects(MOCK_DATA.self))")
+                print("Migrated objects : \(String(describing: realm?.objects(Contacts.self)))")
             }catch{
                 print(error.localizedDescription)
             }

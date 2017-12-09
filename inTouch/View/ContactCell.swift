@@ -11,7 +11,7 @@ import UIKit
 class ContactCell: UITableViewCell {
     @IBOutlet weak var lb: UILabel!
     @IBOutlet weak var img: UIImageView!
-    var contact : MOCK_DATA?{
+    var contact : Contacts?{
         didSet{
             // Default behave
             guard let name = contact?.name  else {return}

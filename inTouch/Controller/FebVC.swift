@@ -10,7 +10,7 @@ import UIKit
 
 class FebVC: UIViewController {
     
-    var f = [MOCK_DATA](){
+    var f = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
@@ -31,7 +31,7 @@ class FebVC: UIViewController {
         let _data = realm?.objects(feb.self)
         guard let data = _data else {return}
         let allNumber = Array(data)
-        var mkd = [MOCK_DATA]()
+        var mkd = [Contacts]()
         for number in allNumber{
             let _actulaData = self.fetchActualData(forNumber: number.number)
             if let actualData = _actulaData{
@@ -41,9 +41,9 @@ class FebVC: UIViewController {
         self.f = mkd
     }
     
-    func fetchActualData(forNumber number: Int) -> MOCK_DATA?{
+    func fetchActualData(forNumber number: Int) -> Contacts?{
         let query = NSPredicate(format: "number == \(number)")
-        let _mk = realm?.objects(MOCK_DATA.self).filter(query)
+        let _mk = realm?.objects(Contacts.self).filter(query)
         if let mk = _mk{
             // assuming evryone got unique number
             let data = Array(mk).first

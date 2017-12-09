@@ -15,30 +15,32 @@ class APIManager{
         return self._shared
     }
     
-    func getContactDetails(text: String, completion: ((Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?))->()){
+    func getContactDetails(text: String, completion: ((Array<Contacts>?,Array<Contacts>?,Array<Contacts>?,Array<Contacts>?,Array<Contacts>?))->()){
         guard let _realm = realm else {return}
         let uirealm = _realm
-        let number = Int(text)
-        var _num : Array<MOCK_DATA>?
-        if number != nil {
-            let numberPredicate = NSPredicate(format: "number == \(number!)")
-            let numbers = uirealm.objects(MOCK_DATA.self).filter(numberPredicate)
-            _num = Array(numbers)
-        }
+/*
+         Realm have limited Search feature on Interger. better to change model and store
+         Int as String to better Search and user experience.
+ */
+        let numberPredicate = NSPredicate(format: "number CONTAINS '\(text)'")
         let namepredicate = NSPredicate(format: "name CONTAINS '\(text)'")
         let notepredicate = NSPredicate(format: "notes CONTAINS '\(text)'")
         let organisationpredicate = NSPredicate(format: "organisation CONTAINS '\(text)'")
         let citypredicate = NSPredicate(format: "city CONTAINS '\(text)'")
         let namequery = NSCompoundPredicate(orPredicateWithSubpredicates: [namepredicate])
         let notequery = NSCompoundPredicate(orPredicateWithSubpredicates: [notepredicate])
-        let names = uirealm.objects(MOCK_DATA.self).filter(namequery)
+        let numberQuery = NSCompoundPredicate(orPredicateWithSubpredicates: [numberPredicate])
+        let names = uirealm.objects(Contacts.self).filter(namequery)
+        let numbers = uirealm.objects(Contacts.self).filter(numberQuery)
+        let _num = Array(numbers)
         let _names  = Array(names)
-        let notes = uirealm.objects(MOCK_DATA.self).filter(notequery)
+        let notes = uirealm.objects(Contacts.self).filter(notequery)
         let _notes = Array(notes)
-        let org = uirealm.objects(MOCK_DATA.self).filter(organisationpredicate)
+        let org = uirealm.objects(Contacts.self).filter(organisationpredicate)
         let _organisation  = Array(org)
-        let c = uirealm.objects(MOCK_DATA.self).filter(citypredicate)
+        let c = uirealm.objects(Contacts.self).filter(citypredicate)
         let _city  = Array(c)
+        
         completion((_names,_notes,_organisation,_city,_num))
     }
 }

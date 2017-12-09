@@ -23,8 +23,9 @@
 		ED310DB71FDBB867006BF78C /* OrgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DB51FDBB867006BF78C /* OrgCell.swift */; };
 		ED310DB81FDBB867006BF78C /* OrgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DB61FDBB867006BF78C /* OrgCell.xib */; };
 		ED310DBC1FDBBA49006BF78C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBB1FDBBA49006BF78C /* DetailsViewModel.swift */; };
-		ED310DBE1FDBDDAA006BF78C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBD1FDBDDAA006BF78C /* Data.swift */; };
+		ED310DBE1FDBDDAA006BF78C /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBD1FDBDDAA006BF78C /* ImageData.swift */; };
 		ED310DC01FDBEE5B006BF78C /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */; };
+		ED3D80791FDC584100C4B51A /* defaultV1.realm in Resources */ = {isa = PBXBuildFile; fileRef = ED3D80781FDC584100C4B51A /* defaultV1.realm */; };
 		EDA7438C1FDAF6A5008634F8 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */; };
 		EDA7438D1FDAF6A5008634F8 /* DetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */; };
 		EDA743901FDAF99A008634F8 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */; };
@@ -40,7 +41,7 @@
 		EDDD9BEE1FDA8E430071B356 /* inTouchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BED1FDA8E430071B356 /* inTouchTests.swift */; };
 		EDDD9BF91FDA8E430071B356 /* inTouchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD9BF81FDA8E430071B356 /* inTouchUITests.swift */; };
 		EDE046561FDAA7D1000564AC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE046551FDAA7D1000564AC /* Contact.swift */; };
-		EDE046571FDAAAEF000564AC /* defaultV1.realm in Resources */ = {isa = PBXBuildFile; fileRef = EDE046541FDAA587000564AC /* defaultV1.realm */; };
+		EDE046571FDAAAEF000564AC /* defaultV1T.realm in Resources */ = {isa = PBXBuildFile; fileRef = EDE046541FDAA587000564AC /* defaultV1T.realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +82,9 @@
 		ED310DB51FDBB867006BF78C /* OrgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgCell.swift; sourceTree = "<group>"; };
 		ED310DB61FDBB867006BF78C /* OrgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgCell.xib; sourceTree = "<group>"; };
 		ED310DBB1FDBBA49006BF78C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
-		ED310DBD1FDBDDAA006BF78C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ED310DBD1FDBDDAA006BF78C /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
+		ED3D80781FDC584100C4B51A /* defaultV1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultV1.realm; sourceTree = "<group>"; };
 		EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsVC.xib; sourceTree = "<group>"; };
 		EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		EDDD9BF41FDA8E430071B356 /* inTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDD9BF81FDA8E430071B356 /* inTouchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inTouchUITests.swift; sourceTree = "<group>"; };
 		EDDD9BFA1FDA8E430071B356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDE046541FDAA587000564AC /* defaultV1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultV1.realm; sourceTree = "<group>"; };
+		EDE046541FDAA587000564AC /* defaultV1T.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = defaultV1T.realm; sourceTree = "<group>"; };
 		EDE046551FDAA7D1000564AC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F7015076F3177675B41E8B /* Pods-inTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouch/Pods-inTouch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,8 +203,9 @@
 		EDA743961FDAFA0A008634F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDE046551FDAA7D1000564AC /* Contact.swift */,
 				EDA743971FDAFA2B008634F8 /* APIManager.swift */,
-				ED310DBD1FDBDDAA006BF78C /* Data.swift */,
+				ED310DBD1FDBDDAA006BF78C /* ImageData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -210,7 +213,8 @@
 		EDDD9BCC1FDA8E430071B356 = {
 			isa = PBXGroup;
 			children = (
-				EDE046541FDAA587000564AC /* defaultV1.realm */,
+				ED3D80781FDC584100C4B51A /* defaultV1.realm */,
+				EDE046541FDAA587000564AC /* defaultV1T.realm */,
 				EDDD9BD71FDA8E430071B356 /* inTouch */,
 				EDDD9BEC1FDA8E430071B356 /* inTouchTests */,
 				EDDD9BF71FDA8E430071B356 /* inTouchUITests */,
@@ -265,7 +269,6 @@
 			children = (
 				ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */,
 				EDDD9BD81FDA8E430071B356 /* AppDelegate.swift */,
-				EDE046551FDAA7D1000564AC /* Contact.swift */,
 				EDDD9BDF1FDA8E430071B356 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -409,7 +412,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE046571FDAAAEF000564AC /* defaultV1.realm in Resources */,
+				EDE046571FDAAAEF000564AC /* defaultV1T.realm in Resources */,
+				ED3D80791FDC584100C4B51A /* defaultV1.realm in Resources */,
 				EDDD9BE31FDA8E430071B356 /* LaunchScreen.storyboard in Resources */,
 				EDDD9BE01FDA8E430071B356 /* Assets.xcassets in Resources */,
 				ED310DB41FDBB838006BF78C /* CityCell.xib in Resources */,
@@ -614,7 +618,7 @@
 				ED310DB71FDBB867006BF78C /* OrgCell.swift in Sources */,
 				ED310DC01FDBEE5B006BF78C /* UIView+Blur.swift in Sources */,
 				EDE046561FDAA7D1000564AC /* Contact.swift in Sources */,
-				ED310DBE1FDBDDAA006BF78C /* Data.swift in Sources */,
+				ED310DBE1FDBDDAA006BF78C /* ImageData.swift in Sources */,
 				EDA7438C1FDAF6A5008634F8 /* DetailsVC.swift in Sources */,
 				ED310DAF1FDBB826006BF78C /* NotesCell.swift in Sources */,
 				ED310DAB1FDBB813006BF78C /* NumberCell.swift in Sources */,

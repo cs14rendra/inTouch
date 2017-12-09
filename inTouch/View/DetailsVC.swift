@@ -17,13 +17,17 @@ class DetailsVC: UIViewController {
     var ViewModel : DetailsViewModel?
     var imageName : String?
     
-    var contact : MOCK_DATA?{
+    var contact : Contacts?{
         didSet{
             ViewModel = DetailsViewModel(_data: contact)
             if let number = contact?.number{
-                let imageNumber = number % 15
-                imageName = "\(imageNumber)"
-                setHeader(imageName: imageName!)
+                let numInt = Int(number)
+                if let _n = numInt{
+                    let imageNumber = _n % 15
+                    imageName = "\(imageNumber)"
+                    setHeader(imageName: imageName!)
+                }
+                
             }else{
                 setHeader(imageName: "defaultImage")
             }
