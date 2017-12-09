@@ -286,19 +286,20 @@ extension ViewController :  UITableViewDelegate{
             let section = indexPath.section
             switch section{
             case 0 :
-                let obj = feb()
                 let numberString = self.names[indexPath.row].number
-                let numInt = Int(numberString)
-                if let n = numInt{
-                    obj.number = n
-                    do{
-                        try  realm?.write {
-                            realm?.add(obj)
-                        }
-                    }catch{
-                        print(error.localizedDescription)
-                    }
-                }
+                self.savefeb(forNumber: numberString)
+            case 1 :
+                let numberString = self.number[indexPath.row].number
+                self.savefeb(forNumber: numberString)
+            case 2 :
+                let numberString = self.organisation[indexPath.row].number
+                self.savefeb(forNumber: numberString)
+            case 3 :
+                let numberString = self.city[indexPath.row].number
+                self.savefeb(forNumber: numberString)
+            case 4 :
+                let numberString = self.notes[indexPath.row].number
+                self.savefeb(forNumber: numberString)
             default: break
             }
         })
@@ -316,6 +317,17 @@ extension ViewController :  UITableViewDelegate{
 }
 
 extension ViewController{
+    func savefeb(forNumber number: String){
+        let obj = feb()
+        obj.number = number
+        do{
+            try  realm?.write {
+                realm?.add(obj)
+            }
+        }catch{
+            print(error.localizedDescription)
+        }
+    }
     func deleteData(at indexPath : IndexPath) throws{
         switch indexPath.section {
         case 0:

@@ -21,4 +21,6 @@ class Contacts: Object{
     @objc dynamic var city : String = ""
 }
 
-
+class feb:Object{
+    @objc dynamic var number = ""
+}

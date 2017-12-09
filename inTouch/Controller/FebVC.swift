@@ -41,8 +41,8 @@ class FebVC: UIViewController {
         self.f = mkd
     }
     
-    func fetchActualData(forNumber number: Int) -> Contacts?{
-        let query = NSPredicate(format: "number == \(number)")
+    func fetchActualData(forNumber number: String) -> Contacts?{
+        let query = NSPredicate(format: "number == '\(number)'")
         let _mk = realm?.objects(Contacts.self).filter(query)
         if let mk = _mk{
             // assuming evryone got unique number
