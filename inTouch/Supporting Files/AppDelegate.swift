@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+var realm  : Realm?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,13 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(realmURL)
             let realmnewConfiguration = Realm.Configuration(fileURL: realmURL, schemaVersion: 0, migrationBlock: migrationBlock)
             do {
-                try FileManager.default.removeItem(at: realmURL)
+                //try FileManager.default.removeItem(at: realmURL)
                 try FileManager.default.copyItem(at: url, to: realmURL)
               
-            } catch {}
+            } catch {
+                print(error.localizedDescription)
+            }
             try! Realm.performMigration(for: realmnewConfiguration)
-            let newrealm = try! Realm(configuration: realmnewConfiguration)
-           // print("Migrated objects : \(newrealm.objects(MOCK_DATA.self))")
+            realm = try! Realm(configuration: realmnewConfiguration)
+            print("Migrated objects : \(realm?.objects(MOCK_DATA.self))")
         }
 
         return true

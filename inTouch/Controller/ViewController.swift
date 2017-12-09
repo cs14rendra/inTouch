@@ -55,9 +55,14 @@ class ViewController: UIViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
+        self.tableView.register(ContactCell.nib, forCellReuseIdentifier: ContactCell.identifier)
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationItem.leftBarButtonItem  = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(ViewController.get(_:)))
+      
+    }
    
     @IBAction func get(_ sender: Any) {
     }
@@ -146,54 +151,71 @@ extension ViewController :  UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
+        cell.selectionStyle = .none
         switch indexPath.section {
         case 0 :
+            let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
+            c.img.image = UIImage(named: "user")
             if self.names.count <= 0 {
-              cell.textLabel?.text = "No results!"
-               
+              c.lb.text = "No results!"
+              c.selectionStyle = .none
             }else{
                 let text = self.names[indexPath.row].name
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
-                cell.textLabel?.attributedText = attributedText
+                c.lb.attributedText = attributedText
             }
+            return c
         case 1 :
+            let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
+            c.img.image = UIImage(named: "notes")
             if self.notes.count <= 0 {
-                cell.textLabel?.text = "No results!"
-                
+                c.lb.text = "No results!"
+                c.selectionStyle = .none
             }else{
                 let text = self.notes[indexPath.row].notes
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
-                cell.textLabel?.attributedText = attributedText
+                c.lb.attributedText = attributedText
             }
-        
+            return c
        case 2 :
-            if self.organisation.count <= 0 {
-                cell.textLabel?.text = "No results!"
-                
-            }else{
-                let text = self.organisation[indexPath.row].organisation
-                let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
-                cell.textLabel?.attributedText = attributedText
-            }
+        let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
+        c.img.image = UIImage(named: "org")
+        if self.organisation.count <= 0 {
+            c.lb.text = "No results!"
+            cell.selectionStyle = .none
+            
+        }else{
+            let text = "\(self.organisation[indexPath.row].organisation)"
+            let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
+            c.lb.attributedText = attributedText
+        }
+        return c
         case 3 :
+            let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
+            c.img.image = UIImage(named: "city")
             if self.city.count <= 0 {
-                cell.textLabel?.text = "No results!"
+                c.lb.text = "No results!"
+                cell.selectionStyle = .none
                 
             }else{
-                let text = self.city[indexPath.row].city
+                let text = "\(self.city[indexPath.row].city)"
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
-                cell.textLabel?.attributedText = attributedText
+                c.lb.attributedText = attributedText
             }
+            return c
         case 4 :
+            let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
+            c.img.image = UIImage(named: "call")
             if self.number.count <= 0 {
-                cell.textLabel?.text = "No results!"
+                c.lb.text = "No results!"
+                cell.selectionStyle = .none
                 
             }else{
                 let text = "\(self.number[indexPath.row].number)"
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
-                cell.textLabel?.attributedText = attributedText
+                c.lb.attributedText = attributedText
             }
+            return c
         default :
             break
         }
@@ -202,23 +224,31 @@ extension ViewController :  UITableViewDataSource{
 }
 
 extension ViewController :  UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print(indexPath)
         let vc = DetailsVC()
+        //let nav = UINavigationController(rootViewController: vc)
+        
         switch indexPath.section {
         case 0:
+            guard self.names.count > 0 else {return}
             vc.contact = self.names[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 1:
+            guard self.notes.count > 0 else {return}
             vc.contact = self.notes[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 2:
+            guard self.organisation.count > 0 else {return}
             vc.contact = self.organisation[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 3:
+            guard self.city.count > 0 else {return}
             vc.contact = self.city[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 4:
+            guard self.number.count > 0 else {return}
             vc.contact = self.number[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         default:
@@ -248,6 +278,12 @@ extension ViewController :  UITableViewDelegate{
         firstactin.backgroundColor = UIColor.gray
         secondtactin.backgroundColor = UIColor.green
         return [firstactin,secondtactin]
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 

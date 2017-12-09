@@ -10,6 +10,19 @@
 		72863D65A0350CBBFFCAE14D /* Pods_inTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2429BE6A101045FC579483C7 /* Pods_inTouch.framework */; };
 		7A422F6A69540DDC335134D7 /* Pods_inTouchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */; };
 		AF3EE45BF2EC5B9FED00A48E /* Pods_inTouchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */; };
+		ED310DA71FDBB7FE006BF78C /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DA51FDBB7FE006BF78C /* NameCell.swift */; };
+		ED310DA81FDBB7FE006BF78C /* NameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DA61FDBB7FE006BF78C /* NameCell.xib */; };
+		ED310DAB1FDBB813006BF78C /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DA91FDBB813006BF78C /* NumberCell.swift */; };
+		ED310DAC1FDBB813006BF78C /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DAA1FDBB813006BF78C /* NumberCell.xib */; };
+		ED310DAF1FDBB826006BF78C /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DAD1FDBB826006BF78C /* NotesCell.swift */; };
+		ED310DB01FDBB826006BF78C /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DAE1FDBB826006BF78C /* NotesCell.xib */; };
+		ED310DB31FDBB838006BF78C /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DB11FDBB838006BF78C /* CityCell.swift */; };
+		ED310DB41FDBB838006BF78C /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DB21FDBB838006BF78C /* CityCell.xib */; };
+		ED310DB71FDBB867006BF78C /* OrgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DB51FDBB867006BF78C /* OrgCell.swift */; };
+		ED310DB81FDBB867006BF78C /* OrgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DB61FDBB867006BF78C /* OrgCell.xib */; };
+		ED310DBC1FDBBA49006BF78C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBB1FDBBA49006BF78C /* DetailsViewModel.swift */; };
+		ED310DBE1FDBDDAA006BF78C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBD1FDBDDAA006BF78C /* Data.swift */; };
+		ED310DC01FDBEE5B006BF78C /* UIView+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */; };
 		EDA7438C1FDAF6A5008634F8 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */; };
 		EDA7438D1FDAF6A5008634F8 /* DetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */; };
 		EDA743901FDAF99A008634F8 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */; };
@@ -53,6 +66,19 @@
 		D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED310DA51FDBB7FE006BF78C /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
+		ED310DA61FDBB7FE006BF78C /* NameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameCell.xib; sourceTree = "<group>"; };
+		ED310DA91FDBB813006BF78C /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		ED310DAA1FDBB813006BF78C /* NumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
+		ED310DAD1FDBB826006BF78C /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		ED310DAE1FDBB826006BF78C /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
+		ED310DB11FDBB838006BF78C /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		ED310DB21FDBB838006BF78C /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		ED310DB51FDBB867006BF78C /* OrgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgCell.swift; sourceTree = "<group>"; };
+		ED310DB61FDBB867006BF78C /* OrgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgCell.xib; sourceTree = "<group>"; };
+		ED310DBB1FDBBA49006BF78C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		ED310DBD1FDBDDAA006BF78C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Blur.swift"; sourceTree = "<group>"; };
 		EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsVC.xib; sourceTree = "<group>"; };
 		EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
@@ -130,10 +156,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED310DA41FDBB7C8006BF78C /* DetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED310DA51FDBB7FE006BF78C /* NameCell.swift */,
+				ED310DA61FDBB7FE006BF78C /* NameCell.xib */,
+				ED310DA91FDBB813006BF78C /* NumberCell.swift */,
+				ED310DAA1FDBB813006BF78C /* NumberCell.xib */,
+				ED310DAD1FDBB826006BF78C /* NotesCell.swift */,
+				ED310DAE1FDBB826006BF78C /* NotesCell.xib */,
+				ED310DB11FDBB838006BF78C /* CityCell.swift */,
+				ED310DB21FDBB838006BF78C /* CityCell.xib */,
+				ED310DB51FDBB867006BF78C /* OrgCell.swift */,
+				ED310DB61FDBB867006BF78C /* OrgCell.xib */,
+			);
+			name = DetailsCell;
+			sourceTree = "<group>";
+		};
+		ED310DB91FDBB88D006BF78C /* DetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				ED310DBB1FDBBA49006BF78C /* DetailsViewModel.swift */,
+				EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */,
+				EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */,
+			);
+			name = DetailsVC;
+			sourceTree = "<group>";
+		};
+		ED310DBA1FDBB89B006BF78C /* SearcCell */ = {
+			isa = PBXGroup;
+			children = (
+				EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */,
+				EDA7438F1FDAF99A008634F8 /* EmptyCell.xib */,
+				EDA743921FDAF9B2008634F8 /* ContactCell.swift */,
+				EDA743931FDAF9B2008634F8 /* ContactCell.xib */,
+			);
+			name = SearcCell;
+			sourceTree = "<group>";
+		};
 		EDA743961FDAFA0A008634F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EDA743971FDAFA2B008634F8 /* APIManager.swift */,
+				ED310DBD1FDBDDAA006BF78C /* Data.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -194,6 +259,7 @@
 		EDDD9C061FDA8ECC0071B356 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED310DBF1FDBEE5B006BF78C /* UIView+Blur.swift */,
 				EDDD9BD81FDA8E430071B356 /* AppDelegate.swift */,
 				EDE046551FDAA7D1000564AC /* Contact.swift */,
 				EDDD9BDF1FDA8E430071B356 /* Assets.xcassets */,
@@ -212,14 +278,11 @@
 		EDDD9C081FDA8EEC0071B356 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED310DA41FDBB7C8006BF78C /* DetailsCell */,
+				ED310DB91FDBB88D006BF78C /* DetailsVC */,
+				ED310DBA1FDBB89B006BF78C /* SearcCell */,
 				EDDD9BDC1FDA8E430071B356 /* Main.storyboard */,
-				EDA7438A1FDAF6A5008634F8 /* DetailsVC.swift */,
-				EDA7438B1FDAF6A5008634F8 /* DetailsVC.xib */,
 				EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */,
-				EDA7438E1FDAF99A008634F8 /* EmptyCell.swift */,
-				EDA7438F1FDAF99A008634F8 /* EmptyCell.xib */,
-				EDA743921FDAF9B2008634F8 /* ContactCell.swift */,
-				EDA743931FDAF9B2008634F8 /* ContactCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,9 +406,14 @@
 				EDE046571FDAAAEF000564AC /* defaultV1.realm in Resources */,
 				EDDD9BE31FDA8E430071B356 /* LaunchScreen.storyboard in Resources */,
 				EDDD9BE01FDA8E430071B356 /* Assets.xcassets in Resources */,
+				ED310DB41FDBB838006BF78C /* CityCell.xib in Resources */,
+				ED310DAC1FDBB813006BF78C /* NumberCell.xib in Resources */,
 				EDDD9BDE1FDA8E430071B356 /* Main.storyboard in Resources */,
 				EDA7438D1FDAF6A5008634F8 /* DetailsVC.xib in Resources */,
 				EDA743911FDAF99A008634F8 /* EmptyCell.xib in Resources */,
+				ED310DB81FDBB867006BF78C /* OrgCell.xib in Resources */,
+				ED310DB01FDBB826006BF78C /* NotesCell.xib in Resources */,
+				ED310DA81FDBB7FE006BF78C /* NameCell.xib in Resources */,
 				EDA743951FDAF9B2008634F8 /* ContactCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,14 +541,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-inTouch/Pods-inTouch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/ParallaxHeader/ParallaxHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParallaxHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,8 +601,16 @@
 			files = (
 				EDA743981FDAFA2B008634F8 /* APIManager.swift in Sources */,
 				EDA743941FDAF9B2008634F8 /* ContactCell.swift in Sources */,
+				ED310DA71FDBB7FE006BF78C /* NameCell.swift in Sources */,
+				ED310DB31FDBB838006BF78C /* CityCell.swift in Sources */,
+				ED310DBC1FDBBA49006BF78C /* DetailsViewModel.swift in Sources */,
+				ED310DB71FDBB867006BF78C /* OrgCell.swift in Sources */,
+				ED310DC01FDBEE5B006BF78C /* UIView+Blur.swift in Sources */,
 				EDE046561FDAA7D1000564AC /* Contact.swift in Sources */,
+				ED310DBE1FDBDDAA006BF78C /* Data.swift in Sources */,
 				EDA7438C1FDAF6A5008634F8 /* DetailsVC.swift in Sources */,
+				ED310DAF1FDBB826006BF78C /* NotesCell.swift in Sources */,
+				ED310DAB1FDBB813006BF78C /* NumberCell.swift in Sources */,
 				EDDD9BDB1FDA8E430071B356 /* ViewController.swift in Sources */,
 				EDDD9BD91FDA8E430071B356 /* AppDelegate.swift in Sources */,
 				EDA743901FDAF99A008634F8 /* EmptyCell.swift in Sources */,

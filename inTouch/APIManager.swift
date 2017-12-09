@@ -16,7 +16,7 @@ class APIManager{
     }
     
     func getContactDetails(text: String, completion: ((Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?,Array<MOCK_DATA>?))->()){
-        let uirealm = try! Realm()
+        let uirealm = realm!
         let number = Int(text)
         var _num : Array<MOCK_DATA>?
         if number != nil {
