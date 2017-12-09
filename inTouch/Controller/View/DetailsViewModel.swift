@@ -18,7 +18,6 @@ enum DetailsViewModelItemType {
 }
 
 protocol DetailsViewModelItem {
-    //MARK: - Properties
     var type: DetailsViewModelItemType { get }
     var sectionTitle: String { get }
     var rowCount: Int { get }
@@ -33,11 +32,12 @@ class DetailsViewModel: NSObject{
         items.append(Notes(notes: data.notes))
         items.append(Orgnanisation(orgnanisation: data.organisation))
         items.append(City(city: data.city))
+        
     }
 }
 
-    //MARK: - Extensions
 extension DetailsViewModel : UITableViewDataSource{
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
@@ -52,7 +52,6 @@ extension DetailsViewModel : UITableViewDataSource{
                 cell.contact = item
                 return cell
             }
-    
         case .number:
             if let cell = tableView.dequeueReusableCell(withIdentifier: NumberCell.identifier, for: indexPath) as? NumberCell{
                 cell.contact = item
@@ -118,7 +117,6 @@ class Number : DetailsViewModelItem{
         return 1
     }
 }
-
 class Notes : DetailsViewModelItem{
     
     var notes: String

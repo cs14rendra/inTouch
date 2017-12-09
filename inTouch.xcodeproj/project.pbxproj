@@ -286,8 +286,8 @@
 		EDDD9C081FDA8EEC0071B356 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ED310DA41FDBB7C8006BF78C /* DetailsCell */,
 				ED310DB91FDBB88D006BF78C /* DetailsVC */,
+				ED310DA41FDBB7C8006BF78C /* DetailsCell */,
 				ED310DBA1FDBB89B006BF78C /* SearcCell */,
 				EDDD9BDC1FDA8E430071B356 /* Main.storyboard */,
 				EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */,

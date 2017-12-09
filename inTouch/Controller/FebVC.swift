@@ -10,16 +10,21 @@ import UIKit
 
 class FebVC: UIViewController {
     
+    //MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Variables
     var f = [Contacts](){
         didSet{
             self.tableView.reloadData()
         }
     }
 
-    @IBOutlet weak var tableView: UITableView!
+    //MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(ContactCell.nib, forCellReuseIdentifier: ContactCell.identifier)
+        tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +32,7 @@ class FebVC: UIViewController {
        self.fetchFeb()
     }
     
+    //MARK: - Custome Methods
     func fetchFeb(){
         let _data = realm?.objects(feb.self)
         guard let data = _data else {return}
@@ -53,6 +59,8 @@ class FebVC: UIViewController {
     }
 }
 
+    //MARK: - Extensions
+//MARK: - UITableViewDataSource
 extension FebVC : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let itemcount = f.count
@@ -62,7 +70,6 @@ extension FebVC : UITableViewDataSource{
         }
         return itemcount
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
         let contact = f[indexPath.row]
@@ -72,7 +79,7 @@ extension FebVC : UITableViewDataSource{
     
     
 }
-
+//MARK: - UITableViewDelegate
 extension FebVC : UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -86,7 +93,6 @@ extension FebVC : UITableViewDelegate{
         vc.contact = contact
         self.present(vc, animated: true, completion: nil)
     }
-    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let action = UITableViewRowAction(style: .destructive, title: "delete") { (action, indexpath) in
             print("delete")

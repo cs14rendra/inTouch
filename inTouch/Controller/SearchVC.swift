@@ -12,12 +12,17 @@ import SwiftRichString
 
 class ViewController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Constants
+    let searchController = UISearchController(searchResultsController: nil)
     let section = ["Name","PhoneNumber","Organisation","City", "Notes"]
     let red = Style("", {
         $0.color = UIColor.red
     })
-    
+    //MARK: - Variables
+    var emptyView : UIView?
     var searchText : String?
     var names = [Contacts](){
         didSet{
@@ -44,10 +49,8 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-    let searchController = UISearchController(searchResultsController: nil)
-    var emptyView : UIView?
-
     
+    //MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
@@ -65,6 +68,7 @@ class ViewController: UIViewController {
         
     }
    
+    //MARK: - Custome Methods
     @objc func tap(_ sender: UITapGestureRecognizer) {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
@@ -107,22 +111,11 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController : UISearchResultsUpdating{
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-   
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        applyFilter(text: searchText)
-    }
-    
-}
 
-
+    //MARK: - Extensions
+    //MARK: - UITableViewDataSource
 extension ViewController :  UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //print(totalItemCount())
-        //print(isFiltering())
         if totalItemCount() <= 0 && !isFiltering(){
             self.tableView.backgroundView = emptyView
             self.tableView.separatorStyle = .none
@@ -231,13 +224,11 @@ extension ViewController :  UITableViewDataSource{
     }
 }
 
+//MARK: - UITableViewDategate
 extension ViewController :  UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(indexPath)
         let vc = DetailsVC()
-        //let nav = UINavigationController(rootViewController: vc)
-        
         switch indexPath.section {
         case 0:
             guard self.names.count > 0 else {return}
@@ -281,8 +272,6 @@ extension ViewController :  UITableViewDelegate{
             print("deleted")
         })
         let secondtactin = UITableViewRowAction(style: .default, title: "Fav", handler: {(action, indexpath) in
-            print("feb")
-            // TODO DO All"
             let section = indexPath.section
             switch section{
             case 0 :
@@ -303,20 +292,34 @@ extension ViewController :  UITableViewDelegate{
             default: break
             }
         })
-        
         firstactin.backgroundColor = UIColor.red
         secondtactin.backgroundColor = UIColor.gray
         return [firstactin,secondtactin]
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
 }
 
+//MARK: - UISearchResultsUpdating
+extension ViewController : UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        applyFilter(text: searchText)
+    }
+    
+}
+//MARK: - ViewController
 extension ViewController{
+    
     func savefeb(forNumber number: String){
         let obj = feb()
         obj.number = number
@@ -328,6 +331,7 @@ extension ViewController{
             print(error.localizedDescription)
         }
     }
+    
     func deleteData(at indexPath : IndexPath) throws{
         switch indexPath.section {
         case 0:
@@ -350,7 +354,6 @@ extension ViewController{
                 self.tableView.deleteRows(at: [indexPath], with: .top)
                 self.tableView.endUpdates()
             }
-            
         case 2:
             let item = self.organisation[indexPath.row]
             let realm = try! Realm()
@@ -372,7 +375,6 @@ extension ViewController{
                 self.tableView.endUpdates()
             }
         case 4:
-            
             let item = self.notes[indexPath.row]
             let realm = try! Realm()
             try realm.write{
@@ -387,6 +389,8 @@ extension ViewController{
         }
     }
 }
+
+//MARK: - UIViewController
 extension UIViewController{
     public func showAlert(title : String, message: String, buttonText: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

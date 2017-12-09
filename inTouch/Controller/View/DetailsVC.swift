@@ -13,7 +13,6 @@ import FontAwesome_swift
 
 class DetailsVC: UIViewController {
     
-    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     var ViewModel : DetailsViewModel?
@@ -35,7 +34,6 @@ class DetailsVC: UIViewController {
         }
     }
     
-    //MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = ViewModel
@@ -47,7 +45,8 @@ class DetailsVC: UIViewController {
         tableView.register(NotesCell.nib, forCellReuseIdentifier: NotesCell.identifier)
         tableView.register(CityCell.nib, forCellReuseIdentifier: CityCell.identifier)
         tableView.register(OrgCell.nib, forCellReuseIdentifier: OrgCell.identifier)
-        }
+        
+    }
 
     func setHeader(imageName : String){
         let image = UIImage(named: imageName)
@@ -100,8 +99,8 @@ class DetailsVC: UIViewController {
     }
 }
 
-    //MARK: - Extensions
 extension DetailsVC : UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -109,6 +108,7 @@ extension DetailsVC : UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let v = view as? UITableViewHeaderFooterView {
             v.backgroundView?.backgroundColor = UIColor.clear
