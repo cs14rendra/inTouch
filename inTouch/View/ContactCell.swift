@@ -9,16 +9,23 @@
 import UIKit
 
 class ContactCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var lb: UILabel!
+    @IBOutlet weak var img: UIImageView!
+    var contact : MOCK_DATA?{
+        didSet{
+            guard let name = contact?.name  else {return}
+            self.lb.text = name
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static var nib:UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
     
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    override func prepareForReuse() {
+        self.img.image = nil
+    }
 }
