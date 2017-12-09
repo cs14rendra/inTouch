@@ -45,26 +45,28 @@ class ViewController: UIViewController {
         }
     }
     let searchController = UISearchController(searchResultsController: nil)
+    var emptyView : UIView?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search for anyone"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         self.tableView.register(ContactCell.nib, forCellReuseIdentifier: ContactCell.identifier)
+        let mynib = Bundle.main.loadNibNamed("EmptyV", owner: self, options: nil)
+        self.emptyView = mynib?.first as? UIView
+        self.emptyView?.frame = self.view.bounds
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(_:)))
+        self.emptyView?.addGestureRecognizer(tap)
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController!.navigationItem.leftBarButtonItem  = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(ViewController.get(_:)))
-      
-    }
    
-    @IBAction func get(_ sender: Any) {
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
     func applyFilter(text : String){
@@ -122,8 +124,13 @@ extension ViewController :  UITableViewDataSource{
         //print(totalItemCount())
         //print(isFiltering())
         if totalItemCount() <= 0 && !isFiltering(){
+            self.tableView.backgroundView = emptyView
+            self.tableView.separatorStyle = .none
             return ""
+        }else{
+            self.tableView.backgroundView = nil
         }
+        self.tableView.separatorStyle = .singleLine
         return self.section[section]
     }
     
@@ -144,6 +151,7 @@ extension ViewController :  UITableViewDataSource{
         case 4 :
             return  isFiltering() && self.number.count == 0 ? 1 : self.number.count
         default:
+            
             return 0
         }
     }
@@ -271,12 +279,27 @@ extension ViewController :  UITableViewDelegate{
             }
             print("deleted")
         })
-        let secondtactin = UITableViewRowAction(style: .default, title: "share", handler: {(action, indexpath) in
-            print("share")
+        let secondtactin = UITableViewRowAction(style: .default, title: "Fav", handler: {(action, indexpath) in
+            print("feb")
+            // TODO add"
+            let section = indexPath.section
+            switch section{
+            case 0 :
+                let obj = feb()
+                obj.number = self.names[indexPath.row].number
+                do{
+                   try  realm?.write {
+                        realm?.add(obj)
+                    }
+                }catch{
+                    print(error.localizedDescription)
+                }
+            default: break
+            }
         })
         
-        firstactin.backgroundColor = UIColor.gray
-        secondtactin.backgroundColor = UIColor.green
+        firstactin.backgroundColor = UIColor.red
+        secondtactin.backgroundColor = UIColor.gray
         return [firstactin,secondtactin]
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

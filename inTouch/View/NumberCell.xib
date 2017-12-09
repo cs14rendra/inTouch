@@ -35,6 +35,9 @@
                         </constraints>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="call"/>
+                        <connections>
+                            <action selector="call:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DWA-EF-Opt"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btY-L3-Yoh" userLabel="msg">
                         <rect key="frame" x="219" y="33" width="33" height="33"/>
@@ -44,6 +47,9 @@
                         </constraints>
                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="sms"/>
+                        <connections>
+                            <action selector="sms:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7Pt-dB-0PB"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

@@ -10,6 +10,8 @@
 		72863D65A0350CBBFFCAE14D /* Pods_inTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2429BE6A101045FC579483C7 /* Pods_inTouch.framework */; };
 		7A422F6A69540DDC335134D7 /* Pods_inTouchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */; };
 		AF3EE45BF2EC5B9FED00A48E /* Pods_inTouchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */; };
+		ED1231E61FDC262700CEB89E /* EmptyV.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1231E51FDC262700CEB89E /* EmptyV.xib */; };
+		ED1231E81FDC3D6A00CEB89E /* FebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1231E71FDC3D6A00CEB89E /* FebVC.swift */; };
 		ED310DA71FDBB7FE006BF78C /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DA51FDBB7FE006BF78C /* NameCell.swift */; };
 		ED310DA81FDBB7FE006BF78C /* NameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED310DA61FDBB7FE006BF78C /* NameCell.xib */; };
 		ED310DAB1FDBB813006BF78C /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DA91FDBB813006BF78C /* NumberCell.swift */; };
@@ -66,6 +68,8 @@
 		D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED1231E51FDC262700CEB89E /* EmptyV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyV.xib; sourceTree = "<group>"; };
+		ED1231E71FDC3D6A00CEB89E /* FebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FebVC.swift; sourceTree = "<group>"; };
 		ED310DA51FDBB7FE006BF78C /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
 		ED310DA61FDBB7FE006BF78C /* NameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameCell.xib; sourceTree = "<group>"; };
 		ED310DA91FDBB813006BF78C /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDD9BDA1FDA8E430071B356 /* ViewController.swift */,
+				ED1231E71FDC3D6A00CEB89E /* FebVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				ED310DBA1FDBB89B006BF78C /* SearcCell */,
 				EDDD9BDC1FDA8E430071B356 /* Main.storyboard */,
 				EDDD9BE11FDA8E430071B356 /* LaunchScreen.storyboard */,
+				ED1231E51FDC262700CEB89E /* EmptyV.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				ED310DB81FDBB867006BF78C /* OrgCell.xib in Resources */,
 				ED310DB01FDBB826006BF78C /* NotesCell.xib in Resources */,
 				ED310DA81FDBB7FE006BF78C /* NameCell.xib in Resources */,
+				ED1231E61FDC262700CEB89E /* EmptyV.xib in Resources */,
 				EDA743951FDAF9B2008634F8 /* ContactCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +618,7 @@
 				EDA7438C1FDAF6A5008634F8 /* DetailsVC.swift in Sources */,
 				ED310DAF1FDBB826006BF78C /* NotesCell.swift in Sources */,
 				ED310DAB1FDBB813006BF78C /* NumberCell.swift in Sources */,
+				ED1231E81FDC3D6A00CEB89E /* FebVC.swift in Sources */,
 				EDDD9BDB1FDA8E430071B356 /* ViewController.swift in Sources */,
 				EDDD9BD91FDA8E430071B356 /* AppDelegate.swift in Sources */,
 				EDA743901FDAF99A008634F8 /* EmptyCell.swift in Sources */,

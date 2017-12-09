@@ -40,9 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } catch {
                 print(error.localizedDescription)
             }
-            try! Realm.performMigration(for: realmnewConfiguration)
-            realm = try! Realm(configuration: realmnewConfiguration)
-            print("Migrated objects : \(realm?.objects(MOCK_DATA.self))")
+            do{
+                try Realm.performMigration(for: realmnewConfiguration)
+                realm = try Realm(configuration: realmnewConfiguration)
+                print("Migrated objects : \(realm?.objects(MOCK_DATA.self))")
+            }catch{
+                print(error.localizedDescription)
+            }
         }
 
         return true

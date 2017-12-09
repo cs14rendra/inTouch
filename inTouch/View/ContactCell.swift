@@ -13,8 +13,10 @@ class ContactCell: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     var contact : MOCK_DATA?{
         didSet{
+            // Default behave
             guard let name = contact?.name  else {return}
             self.lb.text = name
+            self.img.image = UIImage(named:"user")
         }
     }
     static var nib:UINib {
