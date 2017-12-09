@@ -20,3 +20,5 @@ class Contacts: Object{
     @objc dynamic var organisation : String = ""
     @objc dynamic var city : String = ""
 }
+
+

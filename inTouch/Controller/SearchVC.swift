@@ -13,7 +13,7 @@ import SwiftRichString
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    let section = ["Name", "Notes","Organisation","City","PhoneNumber"]
+    let section = ["Name","PhoneNumber","Organisation","City", "Notes"]
     let red = Style("", {
         $0.color = UIColor.red
     })
@@ -143,13 +143,13 @@ extension ViewController :  UITableViewDataSource{
         case 0 :
             return  isFiltering() && self.names.count == 0  ? 1 : self.names.count
         case 1 :
-            return  isFiltering() && self.notes.count == 0 ? 1 : self.notes.count
+            return  isFiltering() && self.number.count == 0 ? 1 : self.number.count
         case 2 :
             return  isFiltering() && self.organisation.count == 0 ? 1 : self.organisation.count
         case 3 :
             return  isFiltering() && self.city.count == 0 ? 1 : self.city.count
         case 4 :
-            return  isFiltering() && self.number.count == 0 ? 1 : self.number.count
+            return  isFiltering() && self.notes.count == 0 ? 1 : self.notes.count
         default:
             
             return 0
@@ -175,12 +175,13 @@ extension ViewController :  UITableViewDataSource{
             return c
         case 1 :
             let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
-            c.img.image = UIImage(named: "notes")
-            if self.notes.count <= 0 {
+            c.img.image = UIImage(named: "call")
+            if self.number.count <= 0 {
                 c.lb.text = "No results!"
-                c.selectionStyle = .none
+                cell.selectionStyle = .none
+                
             }else{
-                let text = self.notes[indexPath.row].notes
+                let text = "\(self.number[indexPath.row].number)"
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
                 c.lb.attributedText = attributedText
             }
@@ -213,13 +214,12 @@ extension ViewController :  UITableViewDataSource{
             return c
         case 4 :
             let c = tableView.dequeueReusableCell(withIdentifier: ContactCell.identifier, for: indexPath) as! ContactCell
-            c.img.image = UIImage(named: "call")
-            if self.number.count <= 0 {
+            c.img.image = UIImage(named: "notes")
+            if self.notes.count <= 0 {
                 c.lb.text = "No results!"
-                cell.selectionStyle = .none
-                
+                c.selectionStyle = .none
             }else{
-                let text = "\(self.number[indexPath.row].number)"
+                let text = self.notes[indexPath.row].notes
                 let attributedText = text.set(styles: red, pattern: "\(searchText!)", options: .caseInsensitive)
                 c.lb.attributedText = attributedText
             }
@@ -244,9 +244,10 @@ extension ViewController :  UITableViewDelegate{
             vc.contact = self.names[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 1:
-            guard self.notes.count > 0 else {return}
-            vc.contact = self.notes[indexPath.row]
+            guard self.number.count > 0 else {return}
+            vc.contact = self.number[indexPath.row]
             self.present(vc, animated: true, completion: nil)
+           
         case 2:
             guard self.organisation.count > 0 else {return}
             vc.contact = self.organisation[indexPath.row]
@@ -256,8 +257,8 @@ extension ViewController :  UITableViewDelegate{
             vc.contact = self.city[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         case 4:
-            guard self.number.count > 0 else {return}
-            vc.contact = self.number[indexPath.row]
+            guard self.notes.count > 0 else {return}
+            vc.contact = self.notes[indexPath.row]
             self.present(vc, animated: true, completion: nil)
         default:
             break
@@ -281,7 +282,7 @@ extension ViewController :  UITableViewDelegate{
         })
         let secondtactin = UITableViewRowAction(style: .default, title: "Fav", handler: {(action, indexpath) in
             print("feb")
-            // TODO add"
+            // TODO DO All"
             let section = indexPath.section
             switch section{
             case 0 :
@@ -328,12 +329,12 @@ extension ViewController{
                     self.tableView.endUpdates()
             }
         case 1:
-            let item = self.notes[indexPath.row]
+            let item = self.number[indexPath.row]
             let realm = try! Realm()
             try realm.write{
                 realm.delete(item)
                 self.tableView.beginUpdates()
-                self.notes.remove(at: indexPath.row)
+                self.number.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .top)
                 self.tableView.endUpdates()
             }
@@ -359,12 +360,13 @@ extension ViewController{
                 self.tableView.endUpdates()
             }
         case 4:
-            let item = self.number[indexPath.row]
+            
+            let item = self.notes[indexPath.row]
             let realm = try! Realm()
             try realm.write{
                 realm.delete(item)
                 self.tableView.beginUpdates()
-                self.number.remove(at: indexPath.row)
+                self.notes.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .top)
                 self.tableView.endUpdates()
             }

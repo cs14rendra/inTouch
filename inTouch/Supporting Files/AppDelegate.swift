@@ -34,7 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(realmURL)
             let realmnewConfiguration = Realm.Configuration(fileURL: realmURL, schemaVersion: 1, migrationBlock: migrationBlock)
             do {
-                //try FileManager.default.removeItem(at: realmURL)
+                
+                if FileManager.default.fileExists(atPath: String(describing: realmURL)){
+                    print("Exist")
+                 try FileManager.default.removeItem(at: realmURL)
+                }
                 try FileManager.default.copyItem(at: url, to: realmURL)
               
             } catch {
