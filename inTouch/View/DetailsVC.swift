@@ -48,7 +48,16 @@ class DetailsVC: UIViewController {
         tableView.register(CityCell.nib, forCellReuseIdentifier: CityCell.identifier)
         tableView.register(OrgCell.nib, forCellReuseIdentifier: OrgCell.identifier)
         }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
     func setHeader(imageName : String){
         let image = UIImage(named: imageName)
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 45))
@@ -62,7 +71,7 @@ class DetailsVC: UIViewController {
         imageView.blurView.setup(style: .dark, alpha: 1.0).enable()
         self.tableView.parallaxHeader.view = imageView
         self.tableView.parallaxHeader.height = 250
-        self.tableView.parallaxHeader.minimumHeight = 120
+        self.tableView.parallaxHeader.minimumHeight = 145
         self.tableView.parallaxHeader.mode = .centerFill
         self.tableView.parallaxHeader.parallaxHeaderDidScrollHandler =
         { p in

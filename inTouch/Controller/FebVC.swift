@@ -97,7 +97,7 @@ extension FebVC : UITableViewDelegate{
         let action = UITableViewRowAction(style: .destructive, title: "delete") { (action, indexpath) in
             print("delete")
             let number = self.f[indexPath.row].number
-            let _object =  realm?.objects(feb.self).filter("number == \(number)").first
+            let _object =  realm?.objects(feb.self).filter("number == '\(number)'").first
             if let object = _object {
                 do{
                     try realm?.write {
