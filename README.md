@@ -7,7 +7,7 @@ Implemented using MVC and MVVM design pattern.
 
 ## Scrennshots
 
-|![Demo](https://i.imgur.com/cIPbjqZ.png)|![Demo](https://i.imgur.com/js0bFpy.png)|![Demo](https://i.imgur.com/FlMLNDL.png)|![Demo](https://i.imgur.com/vyXTlIF.png)|
+|![Demo](https://i.imgur.com/cIPbjqZ.png width="100" height="100")|![Demo](https://i.imgur.com/js0bFpy.png)|![Demo](https://i.imgur.com/FlMLNDL.png)|![Demo](https://i.imgur.com/vyXTlIF.png)|
 
 ## Installation
 - Make a clone of repo
