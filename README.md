@@ -1,6 +1,4 @@
 # inTouch
-A search engine for contacts 
-
 inTouch is a search engine for contacts. user can easily search another user contacts by using Phone number, Name, city, organisation
 or even with their notes. 
 
@@ -24,7 +22,7 @@ Based on String matching, just enter a partial string, inTouch will bring all th
 - [x] Left swipe bring two option for user: Delete, favorite.
 - [x] User can create a Favorite list of contacts, later they can remove contacts from favorite list, it will not affect main Contacts Database.
 - [x] User can delete contacts from main Database Table, when delete from search results Table.
-- [ ] 3D touch not available as not able to test on iphone 5S or in Simulator.
+- [ ] 3D touch not available, as 3D touch is not able to test on iphone 5S or in iOS Simulator.
 
 
 
