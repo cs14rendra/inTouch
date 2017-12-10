@@ -33,11 +33,7 @@ class NumberCell: UITableViewCell {
             return
         }
         if UIApplication.shared.canOpenURL(url){
-            if #available(iOS 10, *) {
                 UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
         }
         
     }
@@ -48,11 +44,7 @@ class NumberCell: UITableViewCell {
             return
         }
         if UIApplication.shared.canOpenURL(url){
-            if #available(iOS 10, *) {
                 UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
         }
     }
 }

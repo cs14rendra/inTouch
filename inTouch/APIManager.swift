@@ -22,25 +22,21 @@ class APIManager{
          Realm have limited Search feature on Interger. better to change model and store
          Int as String to better Search and user experience.
  */
-        let numberPredicate = NSPredicate(format: "number CONTAINS '\(text)'")
-        let namepredicate = NSPredicate(format: "name CONTAINS '\(text)'")
-        let notepredicate = NSPredicate(format: "notes CONTAINS '\(text)'")
-        let organisationpredicate = NSPredicate(format: "organisation CONTAINS '\(text)'")
-        let citypredicate = NSPredicate(format: "city CONTAINS '\(text)'")
-        let namequery = NSCompoundPredicate(orPredicateWithSubpredicates: [namepredicate])
-        let notequery = NSCompoundPredicate(orPredicateWithSubpredicates: [notepredicate])
-        let numberQuery = NSCompoundPredicate(orPredicateWithSubpredicates: [numberPredicate])
+        let numberQuery = NSPredicate(format: "number CONTAINS '\(text)'")
+        let namequery = NSPredicate(format: "name CONTAINS '\(text)'")
+        let notequery = NSPredicate(format: "notes CONTAINS '\(text)'")
+        let organisationquery = NSPredicate(format: "organisation CONTAINS '\(text)'")
+        let cityquery = NSPredicate(format: "city CONTAINS '\(text)'")
         let names = uirealm.objects(Contacts.self).filter(namequery)
         let numbers = uirealm.objects(Contacts.self).filter(numberQuery)
+        let notes = uirealm.objects(Contacts.self).filter(notequery)
+        let org = uirealm.objects(Contacts.self).filter(organisationquery)
+        let c = uirealm.objects(Contacts.self).filter(cityquery)
         let _num = Array(numbers)
         let _names  = Array(names)
-        let notes = uirealm.objects(Contacts.self).filter(notequery)
         let _notes = Array(notes)
-        let org = uirealm.objects(Contacts.self).filter(organisationpredicate)
         let _organisation  = Array(org)
-        let c = uirealm.objects(Contacts.self).filter(citypredicate)
         let _city  = Array(c)
-        
         completion((_names,_notes,_organisation,_city,_num))
     }
 }

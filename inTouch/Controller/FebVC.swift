@@ -29,33 +29,10 @@ class FebVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       self.fetchFeb()
-    }
-    
-    //MARK: - Custome Methods
-    func fetchFeb(){
-        let _data = realm?.objects(feb.self)
-        guard let data = _data else {return}
-        let allNumber = Array(data)
-        var mkd = [Contacts]()
-        for number in allNumber{
-            let _actulaData = self.fetchActualData(forNumber: number.number)
-            if let actualData = _actulaData{
-                mkd.append(actualData)
-            }
+        FavContacts.shared.fetchFeb { (_contacts) in
+            guard let contacts = _contacts else {return}
+            self.f = contacts
         }
-        self.f = mkd
-    }
-    
-    func fetchActualData(forNumber number: String) -> Contacts?{
-        let query = NSPredicate(format: "number == '\(number)'")
-        let _mk = realm?.objects(Contacts.self).filter(query)
-        if let mk = _mk{
-            // assuming evryone got unique number
-            let data = Array(mk).first
-            return data
-        }
-        return nil
     }
 }
 

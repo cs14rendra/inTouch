@@ -10,6 +10,7 @@
 		72863D65A0350CBBFFCAE14D /* Pods_inTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2429BE6A101045FC579483C7 /* Pods_inTouch.framework */; };
 		7A422F6A69540DDC335134D7 /* Pods_inTouchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF281C9FE79B638395118E3D /* Pods_inTouchUITests.framework */; };
 		AF3EE45BF2EC5B9FED00A48E /* Pods_inTouchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */; };
+		ED0553E31FDCFEE900F94615 /* FavContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0553E21FDCFEE900F94615 /* FavContacts.swift */; };
 		ED1231E61FDC262700CEB89E /* EmptyV.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1231E51FDC262700CEB89E /* EmptyV.xib */; };
 		ED1231E81FDC3D6A00CEB89E /* FebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1231E71FDC3D6A00CEB89E /* FebVC.swift */; };
 		ED310DA71FDBB7FE006BF78C /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED310DA51FDBB7FE006BF78C /* NameCell.swift */; };
@@ -69,6 +70,7 @@
 		D261C3B65940C3C16B396645 /* Pods_inTouchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inTouchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF5120D9975A179E4BAC400 /* Pods-inTouchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchUITests/Pods-inTouchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E98AAC6C3C2DE294D358A102 /* Pods-inTouchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inTouchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-inTouchTests/Pods-inTouchTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED0553E21FDCFEE900F94615 /* FavContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavContacts.swift; sourceTree = "<group>"; };
 		ED1231E51FDC262700CEB89E /* EmptyV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyV.xib; sourceTree = "<group>"; };
 		ED1231E71FDC3D6A00CEB89E /* FebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FebVC.swift; sourceTree = "<group>"; };
 		ED310DA51FDBB7FE006BF78C /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				EDE046551FDAA7D1000564AC /* Contact.swift */,
 				EDA743971FDAFA2B008634F8 /* APIManager.swift */,
 				ED310DBD1FDBDDAA006BF78C /* ImageData.swift */,
+				ED0553E21FDCFEE900F94615 /* FavContacts.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				EDDD9BDB1FDA8E430071B356 /* SearchVC.swift in Sources */,
 				EDDD9BD91FDA8E430071B356 /* AppDelegate.swift in Sources */,
 				EDA743901FDAF99A008634F8 /* EmptyCell.swift in Sources */,
+				ED0553E31FDCFEE900F94615 /* FavContacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
