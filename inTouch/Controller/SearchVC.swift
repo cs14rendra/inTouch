@@ -171,7 +171,7 @@ extension ViewController :  UITableViewDataSource{
             c.img.image = UIImage(named: "call")
             if self.number.count <= 0 {
                 c.lb.text = "No results!"
-                cell.selectionStyle = .none
+                c.selectionStyle = .none
                 
             }else{
                 let text = "\(self.number[indexPath.row].number)"
@@ -184,7 +184,7 @@ extension ViewController :  UITableViewDataSource{
         c.img.image = UIImage(named: "org")
         if self.organisation.count <= 0 {
             c.lb.text = "No results!"
-            cell.selectionStyle = .none
+            c.selectionStyle = .none
             
         }else{
             let text = "\(self.organisation[indexPath.row].organisation)"
@@ -197,7 +197,7 @@ extension ViewController :  UITableViewDataSource{
             c.img.image = UIImage(named: "city")
             if self.city.count <= 0 {
                 c.lb.text = "No results!"
-                cell.selectionStyle = .none
+                c.selectionStyle = .none
                 
             }else{
                 let text = "\(self.city[indexPath.row].city)"
