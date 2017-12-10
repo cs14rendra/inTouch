@@ -5,8 +5,6 @@ Simple way to add parallax header to UIScrollView or it's subclasses.
 |----------------------------|---------------------------------|------------------------------|--------------------|
 |![Demo](https://github.com/romansorochak/ParallaxHeader/blob/master/Exmple/Demo.gif)|![Demo](https://github.com/romansorochak/ParallaxHeader/blob/master/Exmple/CollectionDemo.gif)|![Demo](https://github.com/romansorochak/ParallaxHeader/blob/master/Exmple/Demo_with_blur.gif)|![Demo](https://github.com/romansorochak/ParallaxHeader/blob/master/Exmple/Demo_blur_icon.gif)|
 
-## Try it [here](https://appetize.io/app/8v7k0gb5juwc1aeh4up179v8cw?device=iphone5s&scale=75&orientation=portrait&osVersion=9.3)
-
 ## Contents
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -173,4 +171,4 @@ Roman Sorochak - iOS developer - roman.sorochak@gmail.com
 
 ## License
 
-ParallaxHeader is released under the MIT license. See [LICENSE](https://github.com/romansorochak/ParallaxHeader/blob/master/LICENSE) for details.
+Reusable is released under the MIT license. See [LICENSE](https://github.com/romansorochak/ParallaxHeader/blob/master/LICENSE) for details.

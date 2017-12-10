@@ -18,21 +18,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-pZ-UV0">
-                        <rect key="frame" x="40" y="0.0" width="270" height="99.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PEm-jc-G5s"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6N-vt-WyC">
+                        <rect key="frame" x="16" y="5" width="288" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" red="1" green="0.090196080509999998" blue="0.26666668059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-pZ-UV0">
+                        <rect key="frame" x="40" y="34" width="264" height="49.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="oGG-pZ-UV0" secondAttribute="bottom" id="GFj-9K-eOq"/>
-                    <constraint firstItem="oGG-pZ-UV0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="S7u-cz-mEn"/>
-                    <constraint firstAttribute="trailing" secondItem="oGG-pZ-UV0" secondAttribute="trailing" constant="10" id="ccJ-aC-YAz"/>
-                    <constraint firstItem="oGG-pZ-UV0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zmA-bT-VSv"/>
+                    <constraint firstItem="z6N-vt-WyC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ibi-2q-Bwo"/>
+                    <constraint firstAttribute="trailing" secondItem="oGG-pZ-UV0" secondAttribute="trailing" constant="16" id="N8B-eS-ZS4"/>
+                    <constraint firstAttribute="trailing" secondItem="z6N-vt-WyC" secondAttribute="trailing" constant="16" id="V6x-WU-SK9"/>
+                    <constraint firstItem="oGG-pZ-UV0" firstAttribute="top" secondItem="z6N-vt-WyC" secondAttribute="bottom" constant="13" id="XDf-lM-K6f"/>
+                    <constraint firstItem="oGG-pZ-UV0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="ivA-uu-S5x"/>
+                    <constraint firstAttribute="bottom" secondItem="oGG-pZ-UV0" secondAttribute="bottom" constant="16" id="qtu-8q-jaZ"/>
+                    <constraint firstItem="z6N-vt-WyC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xau-8h-yBJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

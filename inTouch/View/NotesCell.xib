@@ -18,21 +18,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdl-CI-thK">
-                        <rect key="frame" x="40" y="0.0" width="270" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Eel-id-gjO"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdl-CI-thK">
+                        <rect key="frame" x="40" y="33" width="270" height="56"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-TW-t4b">
+                        <rect key="frame" x="16" y="5" width="294" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" red="1" green="0.090196080509999998" blue="0.26666668059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Rdl-CI-thK" secondAttribute="trailing" constant="10" id="c1t-jL-p7O"/>
-                    <constraint firstAttribute="bottom" secondItem="Rdl-CI-thK" secondAttribute="bottom" id="cZD-21-v3u"/>
-                    <constraint firstItem="Rdl-CI-thK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="dEF-53-yOb"/>
-                    <constraint firstItem="Rdl-CI-thK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kEO-S9-0b8"/>
+                    <constraint firstItem="Rdl-CI-thK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="H6m-nk-Gq5"/>
+                    <constraint firstAttribute="bottom" secondItem="Rdl-CI-thK" secondAttribute="bottom" constant="10" id="UKm-Of-Xkw"/>
+                    <constraint firstItem="tVx-TW-t4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Vyr-ct-czh"/>
+                    <constraint firstAttribute="trailing" secondItem="tVx-TW-t4b" secondAttribute="trailing" constant="10" id="aPF-fk-l98"/>
+                    <constraint firstItem="Rdl-CI-thK" firstAttribute="top" secondItem="tVx-TW-t4b" secondAttribute="bottom" constant="12" id="db5-3R-hau"/>
+                    <constraint firstAttribute="trailing" secondItem="Rdl-CI-thK" secondAttribute="trailing" constant="10" id="kw3-1k-I6C"/>
+                    <constraint firstItem="tVx-TW-t4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="pSV-S7-pDS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -94,7 +94,7 @@ class Name : DetailsViewModelItem{
         return .name
     }
     var sectionTitle: String {
-        return "Name"
+        return ""
     }
     var rowCount: Int {
         return 1
@@ -112,7 +112,7 @@ class Number : DetailsViewModelItem{
         return .number
     }
     var sectionTitle: String {
-        return "Phone Number"
+        return ""
     }
     var rowCount: Int {
         return 1
@@ -130,7 +130,7 @@ class Notes : DetailsViewModelItem{
         return .notes
     }
     var sectionTitle: String {
-        return "Notes"
+        return ""
     }
     var rowCount: Int {
         return 1

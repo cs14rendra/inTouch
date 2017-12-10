@@ -76,6 +76,7 @@ class DetailsVC: UIViewController {
         self.tableView.parallaxHeader.parallaxHeaderDidScrollHandler =
         { p in
             p.view.blurView.alpha = 1 - p.progress
+            imageView.layer.zPosition = .greatestFiniteMagnitude
         }
         let roundIcon = UIImageView(
             frame: CGRect(x: 0, y: 0, width: 100, height: 100)
@@ -125,6 +126,9 @@ extension DetailsVC : UITableViewDelegate{
         }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 || section == 1 || section == 2{
+            return 0
+        }
         return UITableViewAutomaticDimension
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

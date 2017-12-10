@@ -323,7 +323,7 @@ public class ParallaxHeader: NSObject {
                 toItem: contentView,
                 attribute: NSLayoutAttribute.centerX,
                 multiplier: 1,
-                constant: 0
+                constant: height
             )
         )
     }
@@ -372,7 +372,7 @@ public class ParallaxHeader: NSObject {
                 toItem: contentView,
                 attribute: NSLayoutAttribute.centerX,
                 multiplier: 1,
-                constant: 0
+                constant: height
             )
         )
     }
