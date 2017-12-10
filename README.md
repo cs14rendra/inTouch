@@ -3,6 +3,7 @@ inTouch is a search engine for contacts. user can easily search another user con
 or even with their notes. 
 
 Based on String matching, just enter a partial string, inTouch will bring all the matching contacts to you in a nice tableView.
+Implemented using MVC and MVVM design pattern.
 
 
 ## Installation
