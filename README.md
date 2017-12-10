@@ -8,10 +8,10 @@ Implemented using MVC and MVVM design pattern.
 ## Scrennshots
 
 <p align="center">
-  <img src="https://i.imgur.com/cIPbjqZ.png" width="250"/>
-  <img src="https://i.imgur.com/js0bFpy.png" width="250"/>
-  <img src="https://i.imgur.com/FlMLNDL.png" width="250"/>
-  <img src="https://i.imgur.com/vyXTlIF.png" width="250"/>
+  <img src="https://i.imgur.com/cIPbjqZ.png" width="220"/>
+  <img src="https://i.imgur.com/js0bFpy.png" width="220"/>
+  <img src="https://i.imgur.com/FlMLNDL.png" width="220"/>
+  <img src="https://i.imgur.com/vyXTlIF.png" width="220"/>
 </p>
 
 ## Installation
