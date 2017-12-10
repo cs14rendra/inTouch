@@ -10,6 +10,8 @@ Implemented using MVC and MVVM design pattern.
 <p align="center">
   <img src="https://i.imgur.com/cIPbjqZ.png" width="350"/>
   <img src="https://i.imgur.com/js0bFpy.png" width="350"/>
+  <img src="https://i.imgur.com/FlMLNDL.png" width="350"/>
+  <img src="https://i.imgur.com/vyXTlIF.png" width="350"/>
 </p>
 
 ## Installation
