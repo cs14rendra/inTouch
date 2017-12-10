@@ -16,6 +16,7 @@ Based on String matching, just enter a partial string, inTouch will bring all th
 - [x] Tapping on contact shows details of contact on parallax View
 - [x] Each contact assign a unique photo from 15 photos. same photo is assign on every app launch
 - [x] There is no photo information stored in main realm databse or any storage. assigning done at run time
+- [x] Contact databse size is 5000.
 
 ## Additional Feature
 - [x] User can call or Message to particular contact.
