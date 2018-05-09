@@ -4,13 +4,15 @@ or even with their notes.
 
 Based on String matching, just enter a partial string, inTouch will bring all the matching contacts to you in a nice tableView.
 Implemented using MVC and MVVM design pattern.
-
 ## Screenshots
 
 <p align="center">
-  <img src="https://i.imgur.com/LSYG2VO.png" width="300"/>
-  <img src="https://i.imgur.com/kRDJJSK.png" width="300"/>
+  <img src="https://i.imgur.com/cIPbjqZ.png" width="200"/>
+  <img src="https://i.imgur.com/js0bFpy.png" width="200"/>
+  <img src="https://i.imgur.com/FlMLNDL.png" width="200"/>
+  <img src="https://i.imgur.com/vyXTlIF.png" width="200"/>
 </p>
+
 
 ## Installation
 - Make a clone of repo
